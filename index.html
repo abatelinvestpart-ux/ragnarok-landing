@@ -8,8 +8,8 @@
 <meta property="og:url" content="https://abatelinvestpart-ux.github.io/ragnarok-landing/">
 <meta property="og:title" content="Back to Midgard. Skip the grind.">
 <meta property="og:description" content="Ragnarok: The New World, the free-to-play MMORPG on PC (Steam). Offline progress, free respec, safe refining.">
-<meta property="og:image" content="https://abatelinvestpart-ux.github.io/ragnarok-landing/assets/og-image.jpg">
-<meta property="og:image:secure_url" content="https://abatelinvestpart-ux.github.io/ragnarok-landing/assets/og-image.jpg">
+<meta property="og:image" content="https://abatelinvestpart-ux.github.io/ragnarok-landing/assets/images/og-image.jpg">
+<meta property="og:image:secure_url" content="https://abatelinvestpart-ux.github.io/ragnarok-landing/assets/images/og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -17,304 +17,16 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Back to Midgard. Skip the grind.">
 <meta name="twitter:description" content="Free-to-play MMORPG on PC (Steam). Offline progress, free respec, safe refining.">
-<meta name="twitter:image" content="https://abatelinvestpart-ux.github.io/ragnarok-landing/assets/og-image.jpg">
+<meta name="twitter:image" content="https://abatelinvestpart-ux.github.io/ragnarok-landing/assets/images/og-image.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 2 36 12v16L20 38 4 28V12Z' fill='%2316244F' stroke='%23F2B33D' stroke-width='2'/%3E%3Cpath d='M14 27V13h7.5a4.5 4.5 0 0 1 0 9H14m7 0 5 5' fill='none' stroke='%23F2B33D' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
 <meta name="theme-color" content="#0F1B3D">
 <title>Ragnarok: The New World · Back to Midgard</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Ragnarok: The New World is a free-to-play MMORPG on PC (Steam). Offline idle progress, free stat resets, safe refining and class swaps anytime. Independent fan page.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap">
-<style>
-/* Layout: one long scroll that alternates night sky (Midnight) and daylight (Cloud) bands — each band answers the next doubt, CTA lands at the 3 decision points. */
-:root{
-  --midnight:#0F1B3D; --midnight-2:#16244F; --midnight-3:#1E2F63;
-  --rune:#2E6BE6; --rune-soft:#8DB0FF;
-  --gold:#F2B33D; --gold-hi:#FFD27A; --gold-deep:#C98A12;
-  --cloud:#F4F7FC; --cloud-2:#E6ECF8;
-  --ink:#1B2238; --ink-2:#4A5576;
-  --white:#FFFFFF; --on-dark:#E9EEFB; --on-dark-2:#AEB9DA;
-  --line-dark:rgba(141,176,255,.18); --line-light:#D5DDEE;
-  --display:"Poppins",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --r:14px; --r-sm:10px;
-  --maxw:1180px;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--cloud);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--midnight)}
-img,video{max-width:100%;display:block}
-a{color:var(--rune)}
-h1,h2,h3{font-family:var(--display);line-height:1.12;text-wrap:balance;margin:0;letter-spacing:-.01em}
-p{margin:0}
-.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.band{padding-block:clamp(64px,9vw,112px)}
-.dark{background:var(--midnight);color:var(--on-dark)}
-.dark h2,.dark h3{color:var(--white)}
-.eyebrow{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rune)}
-.dark .eyebrow{color:var(--gold)}
-.h2{font-size:clamp(30px,4.4vw,48px);font-weight:800}
-.lede{font-size:clamp(17px,1.6vw,19px);color:var(--ink-2);max-width:62ch}
-.dark .lede{color:var(--on-dark-2)}
-.sec-head{display:grid;gap:14px;margin-bottom:clamp(32px,5vw,56px);max-width:760px}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
-
-/* ---------- CTA (identical everywhere) ---------- */
-.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 28px;border-radius:12px;background:var(--gold);color:var(--midnight);font-family:var(--display);font-weight:700;font-size:18px;text-decoration:none;letter-spacing:.005em;box-shadow:0 1px 0 var(--gold-hi) inset,0 10px 30px -10px rgba(242,179,61,.7);position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,background .18s}
-.cta svg{width:22px;height:22px;flex:none}
-.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);transform:translateX(-120%);animation:shine 4.5s ease-in-out infinite 1.6s}
-.cta:hover{background:var(--gold-hi);transform:translateY(-2px);box-shadow:0 1px 0 #fff inset,0 16px 36px -12px rgba(242,179,61,.85)}
-.cta:active{transform:translateY(0)}
-@keyframes shine{0%,70%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
-.cta-meta{font-size:14px;color:var(--on-dark-2);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
-.cta-meta b{color:var(--white);font-weight:600}
-.dot{width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.6}
-.pc-note{display:none;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px;color:var(--on-dark);background:rgba(46,107,230,.18);border:1px solid var(--line-dark);border-radius:var(--r-sm);padding:10px 12px}
-.pc-note button{font:600 14px var(--body);color:var(--midnight);background:var(--white);border:0;border-radius:8px;min-height:40px;padding:0 14px;cursor:pointer}
-.is-mobile .pc-note{display:flex}
-.light-note{color:var(--ink);background:var(--cloud-2);border-color:var(--line-light)}
-
-/* ---------- top bar ---------- */
-.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(15,27,61,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-dark)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-family:var(--display);font-weight:700;font-size:16px;line-height:1.1}
-.brand small{display:block;font:500 11px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-2)}
-.brand-mark{width:34px;height:34px;flex:none}
-.topbar .cta{min-height:44px;font-size:15px;padding:0 16px;opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity .25s,transform .25s}
-.topbar.show-cta .cta{opacity:1;transform:none;pointer-events:auto}
-.indep{font-size:12px;color:var(--on-dark-2);border:1px solid var(--line-dark);border-radius:999px;padding:4px 10px;white-space:nowrap}
-@media (max-width:640px){.indep{display:none}.topbar .cta svg{display:none}}
-
-/* ---------- HERO ---------- */
-.hero{position:relative;background:var(--midnight);color:var(--on-dark);overflow:hidden;isolation:isolate}
-.hero-media{position:absolute;inset:0;z-index:-2}
-.hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
-.hero-media video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s}
-.hero-media video.ready{opacity:1}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
-  linear-gradient(90deg,rgba(15,27,61,.96) 0%,rgba(15,27,61,.86) 34%,rgba(15,27,61,.25) 70%,rgba(15,27,61,.05) 100%),
-  linear-gradient(0deg,var(--midnight) 0%,rgba(15,27,61,0) 30%)}
-#sky{position:absolute;inset:0;z-index:-1;pointer-events:none;width:100%;height:100%}
-.hero .wrap{padding-block:clamp(72px,11vw,140px) clamp(56px,8vw,96px);display:grid;gap:26px;max-width:var(--maxw)}
-.hero-copy{max-width:640px;display:grid;gap:22px}
-.hero-tag{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.hero-tag::before{content:"";width:28px;height:2px;background:var(--gold)}
-.hero h1{font-size:clamp(42px,7.2vw,84px);font-weight:800;color:var(--white);line-height:1.02}
-.hero h1 .l2{display:block;color:var(--gold);background:linear-gradient(90deg,var(--gold) 0%,var(--gold-hi) 45%,var(--gold) 90%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:goldflow 6s linear infinite}
-@keyframes goldflow{to{background-position:-200% 0}}
-.hero .sub{font-size:clamp(18px,1.8vw,21px);color:var(--on-dark);max-width:52ch}
-.hero-actions{display:grid;gap:14px;justify-items:start}
-.proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-.chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--white);background:rgba(15,27,61,.55);border:1px solid var(--line-dark);border-radius:999px;padding:7px 14px;backdrop-filter:blur(6px)}
-.chip i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
-.reveal-in>*{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
-.reveal-in>*:nth-child(2){animation-delay:.08s}.reveal-in>*:nth-child(3){animation-delay:.16s}.reveal-in>*:nth-child(4){animation-delay:.24s}.reveal-in>*:nth-child(5){animation-delay:.32s}
-@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
-.scroll-hint{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--on-dark-2);text-decoration:none;margin-top:10px}
-.scroll-hint span{width:22px;height:34px;border:2px solid var(--on-dark-2);border-radius:12px;position:relative}
-.scroll-hint span::after{content:"";position:absolute;left:50%;top:6px;width:4px;height:7px;margin-left:-2px;border-radius:2px;background:var(--gold);animation:wheel 1.8s infinite}
-@keyframes wheel{0%{transform:translateY(0);opacity:1}80%{transform:translateY(10px);opacity:0}100%{opacity:0}}
-
-/* ---------- quick facts strip ---------- */
-.facts{background:var(--midnight-2);color:var(--on-dark);border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
-.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
-.fact{padding:22px 18px;border-left:1px solid var(--line-dark);display:grid;gap:2px}
-.fact:first-child{border-left:0}
-.fact b{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);color:var(--white);font-weight:700;font-variant-numeric:tabular-nums}
-.fact span{font-size:14px;color:var(--on-dark-2)}
-@media (max-width:760px){.facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.fact:nth-child(3){border-left:0}.fact:nth-child(n+3){border-top:1px solid var(--line-dark)}}
-
-/* ---------- WHY: 4 perks ---------- */
-.perks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-@media (max-width:1020px){.perks{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.perks{grid-template-columns:1fr}}
-.perk{background:var(--white);border:1px solid var(--line-light);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
-.perk:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(15,27,61,.45)}
-.perk figure{margin:0;aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--midnight)}
-.perk figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.perk:hover figure img{transform:scale(1.05)}
-.perk .tag{position:absolute;left:12px;top:12px;font:600 12px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--midnight);background:var(--gold);border-radius:6px;padding:4px 8px}
-.perk .body{padding:20px 20px 22px;display:grid;gap:8px}
-.perk h3{font-size:20px;font-weight:700;color:var(--ink)}
-.perk p{font-size:16px;color:var(--ink-2)}
-.src{font-size:12.5px;color:var(--ink-2);opacity:.85}
-.dark .src{color:var(--on-dark-2)}
-
-/* ---------- interactive: refine + idle ---------- */
-.play{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:18px;margin-top:22px}
-@media (max-width:900px){.play{grid-template-columns:1fr}}
-.panel{border-radius:var(--r);padding:26px;position:relative;overflow:hidden}
-.forge{background:radial-gradient(120% 120% at 80% 0%,#2A1B3F 0%,var(--midnight) 55%);color:var(--on-dark);display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center}
-@media (max-width:560px){.forge{grid-template-columns:1fr;justify-items:start}}
-.forge h3{color:var(--white);font-size:22px}
-.forge p{color:var(--on-dark-2);font-size:15.5px}
-.gem{width:150px;height:150px;position:relative;display:grid;place-items:center}
-.gem canvas{position:absolute;inset:-30px;width:210px;height:210px;pointer-events:none}
-.gem .blade{width:120px;height:120px;border-radius:28px;background:linear-gradient(145deg,#2C3E7A,#141F44);border:2px solid rgba(242,179,61,.45);display:grid;place-items:center;transform:rotate(45deg);box-shadow:0 0 40px -6px rgba(242,179,61,.45) inset,0 0 0 6px rgba(46,107,230,.12)}
-.gem .lvl{transform:rotate(-45deg);font-family:var(--display);font-weight:800;font-size:40px;color:var(--gold);text-shadow:0 0 18px rgba(242,179,61,.6);font-variant-numeric:tabular-nums}
-.gem.hit .blade{animation:hit .45s ease}
-.gem.fail .blade{animation:wobble .45s ease}
-@keyframes hit{30%{transform:rotate(45deg) scale(1.12);box-shadow:0 0 70px 4px rgba(242,179,61,.8) inset,0 0 40px 6px rgba(242,179,61,.5)}}
-@keyframes wobble{20%{transform:rotate(40deg)}40%{transform:rotate(50deg)}60%{transform:rotate(42deg)}80%{transform:rotate(48deg)}}
-.forge-ui{display:grid;gap:12px}
-.forge-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{font:700 16px var(--display);min-height:48px;padding:0 22px;border-radius:10px;border:2px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer;transition:background .15s,color .15s}
-.btn:hover{background:var(--gold);color:var(--midnight)}
-.btn.ghost{border-color:var(--line-dark);color:var(--on-dark-2);font-weight:600;font-size:14px;min-height:40px;padding:0 14px}
-.btn.ghost:hover{background:rgba(255,255,255,.08);color:var(--white)}
-.log{min-height:48px;font-size:15px;color:var(--white);background:rgba(255,255,255,.06);border:1px solid var(--line-dark);border-radius:var(--r-sm);padding:10px 12px}
-.log b.ok{color:var(--gold)} .log b.no{color:var(--rune-soft)}
-.idle{background:linear-gradient(180deg,#1A2A5C 0%,#2B3E7E 55%,#F0A35A 160%);color:var(--on-dark)}
-.idle h3{color:var(--white);font-size:22px}
-.idle p{color:var(--on-dark-2);font-size:15.5px}
-.idle-scene{height:130px;position:relative;margin:16px 0 14px;border-radius:var(--r-sm);overflow:hidden;background:linear-gradient(180deg,#0E1838,#24366F)}
-.idle-scene .orb{position:absolute;width:46px;height:46px;border-radius:50%;left:calc(var(--t,0)*85%);top:calc(70% - sin(var(--a,0deg))*55%);background:radial-gradient(circle at 35% 35%,#FFF6D8,#F2B33D 60%,#C98A12);box-shadow:0 0 30px #F2B33D;transition:left .4s,top .4s}
-.idle-scene .ground{position:absolute;left:0;right:0;bottom:0;height:34px;background:linear-gradient(180deg,#24406E,#162650)}
-.loot{position:absolute;bottom:24px;font-size:18px;animation:float 2.4s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-6px)}}
-.meter{height:12px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden}
-.meter i{display:block;height:100%;width:calc(var(--fill,0)*1%);background:linear-gradient(90deg,var(--rune),var(--gold));border-radius:999px;transition:width .4s}
-.idle label{display:flex;justify-content:space-between;font-size:14px;color:var(--white);margin-bottom:8px;font-variant-numeric:tabular-nums}
-input[type=range]{width:100%;accent-color:var(--gold);min-height:32px}
-.illus{font-size:12px;color:var(--on-dark-2);margin-top:8px}
-
-/* ---------- auto vs you ---------- */
-.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
-@media (max-width:800px){.split{grid-template-columns:1fr}}
-.col{border-radius:var(--r);padding:28px;border:1px solid var(--line-dark);background:var(--midnight-2)}
-.col.you{background:linear-gradient(160deg,#1C3170,#14224E);border-color:rgba(242,179,61,.35)}
-.col h3{font-size:22px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
-.col h3 small{font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-2)}
-.col ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
-.col li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start;font-size:16px}
-.col li svg{width:24px;height:24px;margin-top:1px}
-.col li b{color:var(--white);font-weight:600}
-.fit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:18px}
-@media (max-width:800px){.fit{grid-template-columns:1fr}}
-.fit div{border-radius:var(--r);padding:22px 24px;background:rgba(255,255,255,.04);border:1px dashed var(--line-dark)}
-.fit h4{margin:0 0 10px;font:700 16px var(--display);color:var(--white)}
-.fit ul{margin:0;padding-left:20px;display:grid;gap:6px;color:var(--on-dark-2);font-size:15.5px}
-
-/* ---------- trailer ---------- */
-.trailer{display:grid;gap:16px}
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{font:600 15px var(--body);min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line-light);background:var(--white);color:var(--ink);cursor:pointer}
-.tab[aria-selected="true"]{background:var(--midnight);color:var(--white);border-color:var(--midnight)}
-.screen{position:relative;aspect-ratio:16/9;max-width:100%;border-radius:var(--r);overflow:hidden;background:var(--midnight);box-shadow:0 40px 80px -40px rgba(15,27,61,.6)}
-.screen img,.screen video{width:100%;height:100%;object-fit:cover}
-.playbtn{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(0deg,rgba(15,27,61,.55),rgba(15,27,61,.1));border:0;cursor:pointer;color:var(--white)}
-.playbtn span{display:grid;place-items:center;width:88px;height:88px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 10px rgba(242,179,61,.25);transition:transform .2s}
-.playbtn:hover span{transform:scale(1.08)}
-.playbtn svg{width:34px;height:34px;margin-left:5px;color:var(--midnight)}
-.playbtn em{position:absolute;left:18px;bottom:16px;font-style:normal;font:600 15px var(--body);background:rgba(15,27,61,.7);padding:6px 12px;border-radius:8px}
-.under-video{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-
-/* ---------- world gallery ---------- */
-.world-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(120px,14vw,190px);gap:12px}
-.shot{margin:0;position:relative;border-radius:var(--r-sm);overflow:hidden;cursor:zoom-in;border:0;padding:0;background:var(--midnight-2);grid-column:span 2}
-.shot.big{grid-column:span 4;grid-row:span 2}
-.shot.wide{grid-column:span 3}
-.shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.shot:hover img{transform:scale(1.06)}
-.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;text-align:left;font:600 14px var(--body);color:var(--white);background:linear-gradient(0deg,rgba(15,27,61,.92),transparent)}
-@media (max-width:760px){.world-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.shot,.shot.wide{grid-column:span 1}.shot.big{grid-column:span 2;grid-row:span 2}}
-.feature-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:40px}
-@media (max-width:860px){.feature-list{grid-template-columns:1fr}}
-.feature-list div{display:grid;gap:6px;padding-top:16px;border-top:2px solid var(--gold)}
-.feature-list h3{font-size:19px}
-.feature-list p{font-size:15.5px;color:var(--on-dark-2)}
-dialog.lightbox{border:0;padding:0;background:transparent;max-width:min(1280px,94vw);width:100%}
-dialog.lightbox::backdrop{background:rgba(8,14,32,.9)}
-dialog.lightbox img{width:100%;border-radius:12px}
-dialog.lightbox p{color:var(--white);margin-top:10px;font-size:15px}
-dialog.lightbox .x{position:absolute;right:8px;top:8px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(15,27,61,.8);color:var(--white);font-size:22px;cursor:pointer}
-
-/* ---------- party / classes ---------- */
-.party{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
-@media (max-width:900px){.party{grid-template-columns:1fr}}
-.party-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;position:relative;max-width:100%}
-.party-img img{width:100%;height:100%;object-fit:cover;transition:opacity .35s}
-.roles{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 14px}
-.role{font:600 15px var(--body);min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--line-light);background:var(--white);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
-.role[aria-pressed="true"]{background:var(--rune);border-color:var(--rune);color:var(--white)}
-.role-card{background:var(--white);border:1px solid var(--line-light);border-radius:var(--r);padding:20px 22px;display:grid;gap:6px;min-height:132px}
-.role-card h3{font-size:20px}
-.role-card p{color:var(--ink-2);font-size:16px}
-.druid{margin-top:18px;border-radius:var(--r);padding:20px 22px;background:var(--midnight);color:var(--on-dark);display:grid;gap:10px}
-.druid h3{color:var(--white);font-size:19px}
-.forms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.forms span{text-align:center;font:600 14px var(--body);padding:12px 6px;border-radius:10px;background:var(--midnight-3);color:var(--white);border:1px solid var(--line-dark);transition:background .3s,color .3s,transform .3s}
-.forms span.on{background:var(--gold);color:var(--midnight);transform:translateY(-3px)}
-
-/* ---------- 3 steps ---------- */
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:s;position:relative}
-@media (max-width:860px){.steps{grid-template-columns:1fr}}
-.step{background:var(--midnight-2);border:1px solid var(--line-dark);border-radius:var(--r);padding:26px;display:grid;gap:10px;align-content:start;position:relative}
-.step .n{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font:800 22px var(--display);color:var(--midnight);background:var(--gold)}
-.step h3{font-size:21px}
-.step p{color:var(--on-dark-2);font-size:16px}
-.step .time{font-size:13px;font-weight:600;color:var(--rune-soft);letter-spacing:.06em;text-transform:uppercase}
-.mid-cta{margin-top:36px;display:grid;gap:14px;justify-items:center;text-align:center}
-
-/* ---------- before you install ---------- */
-.install{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:18px;align-items:start}
-@media (max-width:900px){.install{grid-template-columns:minmax(0,1fr)}}
-.install>*,.play>*,.split>*,.party>*{min-width:0}
-.table-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--line-light);background:var(--white)}
-table{width:100%;border-collapse:collapse;font-size:16px;min-width:420px}
-th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line-light);vertical-align:top}
-thead th{font:600 13px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:var(--cloud-2)}
-tbody th{font-weight:600;color:var(--ink);width:34%}
-td{font-variant-numeric:tabular-nums}
-tr:last-child th,tr:last-child td{border-bottom:0}
-.tbc{color:var(--ink-2);font-size:14px}
-.notes{display:grid;gap:12px}
-.note{background:var(--white);border:1px solid var(--line-light);border-radius:var(--r);padding:18px 20px;display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px}
-.note svg{width:30px;height:30px;color:var(--rune)}
-.note h3{font-size:17px;margin-bottom:4px}
-.note p{font-size:15.5px;color:var(--ink-2)}
-.ramcheck{margin-top:18px;background:var(--white);border:1px solid var(--line-light);border-radius:var(--r);padding:18px 20px;display:grid;gap:12px}
-.ramcheck h3{font-size:17px}
-.ram-opts{display:flex;flex-wrap:wrap;gap:8px}
-.ram-opts button{font:600 15px var(--body);min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--line-light);background:var(--cloud);color:var(--ink);cursor:pointer}
-.ram-opts button[aria-pressed="true"]{background:var(--midnight);color:var(--white);border-color:var(--midnight)}
-.ram-out{font-size:15.5px;color:var(--ink);min-height:24px}
-
-/* ---------- FAQ ---------- */
-.faq{display:grid;gap:10px;max-width:880px}
-.faq details{background:var(--white);border:1px solid var(--line-light);border-radius:var(--r);overflow:hidden}
-.faq summary{list-style:none;cursor:pointer;padding:20px 56px 20px 22px;font:700 18px var(--display);color:var(--ink);position:relative;min-height:48px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";position:absolute;right:22px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--rune);border-bottom:2.5px solid var(--rune);transform:translateY(-70%) rotate(45deg);transition:transform .25s}
-.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
-.faq .a{padding:0 22px 20px;color:var(--ink-2);display:grid;gap:10px;font-size:16.5px;max-width:72ch}
-.faq .a b{color:var(--ink)}
-
-/* ---------- final ---------- */
-.final{position:relative;overflow:hidden;isolation:isolate;text-align:center}
-.final::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/ss11.webp) center/cover no-repeat}
-.final::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,27,61,.92) 0%,rgba(15,27,61,.72) 50%,rgba(15,27,61,.95) 100%)}
-.final .wrap{display:grid;gap:22px;justify-items:center}
-.final h2{font-size:clamp(36px,6vw,68px);font-weight:800;color:var(--white)}
-.final h2 span{color:var(--gold)}
-.recap{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-footer{background:#0A1330;color:var(--on-dark-2);font-size:14px}
-footer .wrap{padding-block:34px;display:grid;gap:12px}
-footer b{color:var(--on-dark)}
-footer a{color:var(--rune-soft)}
-
-/* ---------- section reveal (visible at rest, only slides) ---------- */
-.rv{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-.js .rv.pre{transform:translateY(26px)}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .js .rv.pre{transform:none}
-}
-</style>
+<link rel="preload" as="image" href="assets/images/hero.webp" fetchpriority="high">
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -336,13 +48,13 @@ footer a{color:var(--rune-soft)}
 <!-- ============ 1 · HERO ============ -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-media">
-    <img src="assets/hero-poster.webp" alt="A hot-air balloon drifts over the green islands of Midgard in Ragnarok: The New World" fetchpriority="high" width="1280" height="720">
-    <video id="heroVideo" muted loop playsinline preload="none" aria-hidden="true" poster="assets/hero-poster.webp"></video>
+    <img src="assets/images/hero.webp" alt="A hot-air balloon drifts over the green islands of Midgard in Ragnarok: The New World" fetchpriority="high" width="1280" height="720">
+    <video id="heroVideo" muted loop playsinline preload="none" aria-hidden="true" poster="assets/images/hero.webp"></video>
   </div>
   <canvas id="sky" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="hero-copy reveal-in">
-      <span class="hero-tag">Tara, balik Midgard tayo</span>
+      <span class="hero-tag">Tara, balik Midgard!</span>
       <h1 id="hero-title">Back to Midgard.<span class="l2">Skip the grind.</span></h1>
       <p class="sub">Your character keeps hunting while you're away. Free stat resets. Safe refining. Up to 120 FPS on PC.</p>
       <div class="hero-actions">
@@ -382,19 +94,19 @@ footer a{color:var(--rune-soft)}
     </div>
     <div class="perks">
       <article class="perk rv">
-        <figure><img src="assets/ss11-sm.webp" alt="Sunset over a calm beach in Midgard" loading="lazy" width="640" height="360"><span class="tag">AFK</span></figure>
+        <figure><img src="assets/images/ss11-sm.webp" alt="Sunset over a calm beach in Midgard" loading="lazy" width="640" height="360"><span class="tag">AFK</span></figure>
         <div class="body"><h3>Earn while offline</h3><p>Log off and your character keeps hunting. Resources pile up while you sleep or work.</p></div>
       </article>
       <article class="perk rv">
-        <figure><img src="assets/ss7-sm.webp" alt="Skill combat with damage numbers against a crowd of monsters" loading="lazy" width="640" height="360"><span class="tag">Respec</span></figure>
+        <figure><img src="assets/images/ss7-sm.webp" alt="Skill combat with damage numbers against a crowd of monsters" loading="lazy" width="640" height="360"><span class="tag">Respec</span></figure>
         <div class="body"><h3>Free stat resets, forever</h3><p>Messed up your build? Reset stats and skills for free. No character is ever "ruined".</p></div>
       </article>
       <article class="perk rv">
-        <figure><img src="assets/refine.webp" alt="Molten metal glowing in a forge" loading="lazy" width="960" height="540"><span class="tag">Refine</span></figure>
+        <figure><img src="assets/images/refine.webp" alt="Molten metal glowing in a forge" loading="lazy" width="960" height="540"><span class="tag">Refine</span></figure>
         <div class="body"><h3>Refine without breaking</h3><p>A failed refine never drops your level and never destroys gear. Push to +15 without fear.</p></div>
       </article>
       <article class="perk rv">
-        <figure><img src="assets/ss3-sm.webp" alt="A party of adventurers standing on an airship deck" loading="lazy" width="640" height="360"><span class="tag">Job change</span></figure>
+        <figure><img src="assets/images/ss3-sm.webp" alt="A party of adventurers standing on an airship deck" loading="lazy" width="640" height="360"><span class="tag">Job change</span></figure>
         <div class="body"><h3>Change class anytime</h3><p>Tank today, heal tomorrow. Master Swordman, Thief, Mage and more on one character.</p></div>
       </article>
     </div>
@@ -469,11 +181,11 @@ footer a{color:var(--rune-soft)}
       <p class="lede">Builds, MVP fights, fashion and vending, in 2 minutes 30.</p>
     </div>
     <div class="tabs" role="tablist" aria-label="Choose a trailer">
-      <button class="tab" role="tab" aria-selected="true" data-src="assets/trailer-gameplay.mp4" data-poster="assets/poster-gameplay.webp" data-label="Gameplay trailer · 2:30">Gameplay · 2:30</button>
-      <button class="tab" role="tab" aria-selected="false" data-src="assets/trailer-pv.mp4" data-poster="assets/poster-pv.webp" data-label="Cinematic trailer · 1:56">Cinematic · 1:56</button>
+      <button class="tab" role="tab" aria-selected="true" data-src="assets/videos/trailer-gameplay.mp4" data-poster="assets/images/poster-gameplay.webp" data-label="Gameplay trailer · 2:30">Gameplay · 2:30</button>
+      <button class="tab" role="tab" aria-selected="false" data-src="assets/videos/trailer-pv.mp4" data-poster="assets/images/poster-pv.webp" data-label="Cinematic trailer · 1:56">Cinematic · 1:56</button>
     </div>
     <div class="screen rv" id="screen">
-      <img id="vposter" src="assets/poster-gameplay.webp" alt="Gameplay trailer preview: classic builds in combat" loading="lazy" width="960" height="540">
+      <img id="vposter" src="assets/images/poster-gameplay.webp" alt="Gameplay trailer preview: classic builds in combat" loading="lazy" width="960" height="540">
       <button class="playbtn" id="playBtn" type="button" aria-label="Play the trailer"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5Z"/></svg></span><em id="vlabel">Gameplay trailer · 2:30</em></button>
     </div>
     <div class="under-video">
@@ -491,14 +203,14 @@ footer a{color:var(--rune-soft)}
       <p class="lede">Climb rooftops, swim the coast, fly between islands. Same cute classic style, rebuilt with modern visuals and sound.</p>
     </div>
     <div class="world-grid">
-      <figure class="shot big rv" data-full="assets/ss10.webp" tabindex="0" role="button" aria-label="Enlarge: climb, swim and dive"><img src="assets/ss10.webp" alt="Three panels: climbing a roof, swimming underwater, floating in a bubble" loading="lazy"><figcaption>Climb, swim, dive. The map is open.</figcaption></figure>
-      <figure class="shot rv" data-full="assets/ss4.webp" tabindex="0" role="button" aria-label="Enlarge: MVP boss arena"><img src="assets/ss4-sm.webp" alt="A winged MVP boss in a red-lit arena" loading="lazy"><figcaption>MVP boss fights</figcaption></figure>
-      <figure class="shot rv" data-full="assets/ss1.webp" tabindex="0" role="button" aria-label="Enlarge: busy town market"><img src="assets/ss1-sm.webp" alt="A town square packed with player vending shops" loading="lazy"><figcaption>Player markets, like old times</figcaption></figure>
-      <figure class="shot wide rv" data-full="assets/ss6.webp" tabindex="0" role="button" aria-label="Enlarge: guild battle"><img src="assets/ss6-sm.webp" alt="A guild battle at a castle gate" loading="lazy"><figcaption>Guild battles at the castle</figcaption></figure>
-      <figure class="shot wide rv" data-full="assets/ss5.webp" tabindex="0" role="button" aria-label="Enlarge: fashion and outfits"><img src="assets/ss5-sm.webp" alt="Eight characters in different outfits and headgear" loading="lazy"><figcaption>100+ looks to dye and mix</figcaption></figure>
-      <figure class="shot rv" data-full="assets/ss9.webp" tabindex="0" role="button" aria-label="Enlarge: theme park"><img src="assets/ss9-sm.webp" alt="A colorful theme park with a swing ride" loading="lazy"><figcaption>Hangouts and events</figcaption></figure>
-      <figure class="shot rv" data-full="assets/ss8.webp" tabindex="0" role="button" aria-label="Enlarge: in-game wedding"><img src="assets/ss8-sm.webp" alt="A wedding ceremony with guests watching" loading="lazy"><figcaption>Weddings are back</figcaption></figure>
-      <figure class="shot rv" data-full="assets/ss2.webp" tabindex="0" role="button" aria-label="Enlarge: wardrobe"><img src="assets/ss2-sm.webp" alt="Wardrobe screen with hairstyle options and angel wings" loading="lazy"><figcaption>Wardrobe and angel wings</figcaption></figure>
+      <figure class="shot big rv" data-full="assets/images/ss10.webp" tabindex="0" role="button" aria-label="Enlarge: climb, swim and dive"><img src="assets/images/ss10.webp" alt="Three panels: climbing a roof, swimming underwater, floating in a bubble" loading="lazy"><figcaption>Climb, swim, dive. The map is open.</figcaption></figure>
+      <figure class="shot rv" data-full="assets/images/ss4.webp" tabindex="0" role="button" aria-label="Enlarge: MVP boss arena"><img src="assets/images/ss4-sm.webp" alt="A winged MVP boss in a red-lit arena" loading="lazy"><figcaption>MVP boss fights</figcaption></figure>
+      <figure class="shot rv" data-full="assets/images/ss1.webp" tabindex="0" role="button" aria-label="Enlarge: busy town market"><img src="assets/images/ss1-sm.webp" alt="A town square packed with player vending shops" loading="lazy"><figcaption>Player markets, like old times</figcaption></figure>
+      <figure class="shot wide rv" data-full="assets/images/ss6.webp" tabindex="0" role="button" aria-label="Enlarge: guild battle"><img src="assets/images/ss6-sm.webp" alt="A guild battle at a castle gate" loading="lazy"><figcaption>Guild battles at the castle</figcaption></figure>
+      <figure class="shot wide rv" data-full="assets/images/ss5.webp" tabindex="0" role="button" aria-label="Enlarge: fashion and outfits"><img src="assets/images/ss5-sm.webp" alt="Eight characters in different outfits and headgear" loading="lazy"><figcaption>100+ looks to dye and mix</figcaption></figure>
+      <figure class="shot rv" data-full="assets/images/ss9.webp" tabindex="0" role="button" aria-label="Enlarge: theme park"><img src="assets/images/ss9-sm.webp" alt="A colorful theme park with a swing ride" loading="lazy"><figcaption>Hangouts and events</figcaption></figure>
+      <figure class="shot rv" data-full="assets/images/ss8.webp" tabindex="0" role="button" aria-label="Enlarge: in-game wedding"><img src="assets/images/ss8-sm.webp" alt="A wedding ceremony with guests watching" loading="lazy"><figcaption>Weddings are back</figcaption></figure>
+      <figure class="shot rv" data-full="assets/images/ss2.webp" tabindex="0" role="button" aria-label="Enlarge: wardrobe"><img src="assets/images/ss2-sm.webp" alt="Wardrobe screen with hairstyle options and angel wings" loading="lazy"><figcaption>Wardrobe and angel wings</figcaption></figure>
     </div>
     <div class="feature-list">
       <div class="rv"><h3>MVP mounts</h3><p>Defeat an MVP and make it your personal mount. Ride the strongest monster in the world.</p></div>
@@ -511,7 +223,7 @@ footer a{color:var(--rune-soft)}
 <!-- ============ 6 · PARTY ============ -->
 <section class="band" aria-labelledby="party-title">
   <div class="wrap party">
-    <div class="party-img rv"><img id="roleImg" src="assets/ss4.webp" alt="Party fighting an MVP boss in an arena" loading="lazy" width="1280" height="720"></div>
+    <div class="party-img rv"><img id="roleImg" src="assets/images/ss4.webp" alt="Party fighting an MVP boss in an arena" loading="lazy" width="1280" height="720"></div>
     <div class="rv">
       <span class="eyebrow">Your guild needs you</span>
       <h2 class="h2" id="party-title">Pick a role tonight. Swap it tomorrow.</h2>
@@ -643,161 +355,11 @@ footer a{color:var(--rune-soft)}
 
 <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
   <button class="x" type="button" id="lbClose" aria-label="Close">×</button>
-  <img id="lbImg" src="" alt="">
+  <img id="lbImg" alt="">
   <p id="lbCap"></p>
 </dialog>
 
-<script>
-(function(){
-  "use strict";
-  var doc=document.documentElement; doc.classList.add("js");
-  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var isMobile=/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)||window.matchMedia("(pointer:coarse) and (max-width:900px)").matches;
-  if(isMobile) doc.classList.add("is-mobile");
-
-  /* ---- CTA click tracking (no URL params added) ---- */
-  window.dataLayer=window.dataLayer||[];
-  document.querySelectorAll("a.cta").forEach(function(a){
-    a.addEventListener("click",function(){
-      window.dataLayer.push({event:"cta_click",cta_position:a.getAttribute("data-cta"),device:isMobile?"mobile":"desktop"});
-    });
-  });
-
-  /* ---- copy link for mobile visitors ---- */
-  document.querySelectorAll(".copylink").forEach(function(b){
-    b.addEventListener("click",function(){
-      var url=location.href.split("#")[0];
-      var done=function(){b.textContent="Link copied";window.dataLayer.push({event:"copy_link"});setTimeout(function(){b.textContent="Copy link"},2200)};
-      try{navigator.clipboard.writeText(url).then(done,function(){b.textContent=url})}catch(e){b.textContent=url}
-    });
-  });
-
-  /* ---- sticky CTA appears after hero ---- */
-  var topbar=document.getElementById("topbar"), heroCta=document.querySelector('[data-cta="hero"]');
-  if("IntersectionObserver" in window && heroCta){
-    new IntersectionObserver(function(es){topbar.classList.toggle("show-cta",!es[0].isIntersecting)},{rootMargin:"-64px 0px 0px 0px"}).observe(heroCta);
-  } else topbar.classList.add("show-cta");
-
-  /* ---- hero video: load after page is ready, skip on mobile/data saver/reduced motion ---- */
-  var hv=document.getElementById("heroVideo");
-  var saveData=navigator.connection&&navigator.connection.saveData;
-  if(hv && !reduce && !saveData && !isMobile){
-    window.addEventListener("load",function(){
-      setTimeout(function(){
-        hv.src="assets/hero-loop.mp4";
-        hv.addEventListener("canplay",function(){hv.classList.add("ready");var p=hv.play();if(p&&p.catch)p.catch(function(){})},{once:true});
-        hv.load();
-      },400);
-    });
-  }
-
-  /* ---- hero sky: drifting gel bubbles + rune sparkles (canvas) ---- */
-  var sky=document.getElementById("sky");
-  if(sky && !reduce){
-    var c=sky.getContext("2d"),W,H,dpr=Math.min(window.devicePixelRatio||1,2),parts=[],run=true;
-    var cols=["255,160,190","242,179,61","141,176,255","255,210,122"];
-    function size(){var r=sky.getBoundingClientRect();W=r.width;H=r.height;sky.width=W*dpr;sky.height=H*dpr;c.setTransform(dpr,0,0,dpr,0,0)}
-    function mk(init){var gel=Math.random()<.28;return{x:Math.random()*W,y:init?Math.random()*H:H+20,r:gel?6+Math.random()*10:1+Math.random()*2.2,gel:gel,vy:gel?.25+Math.random()*.35:.3+Math.random()*.6,ph:Math.random()*6.28,col:cols[gel?0:1+Math.floor(Math.random()*3)],a:.35+Math.random()*.5}}
-    size();var N=Math.round(Math.min(70,W/18));for(var i=0;i<N;i++)parts.push(mk(true));
-    window.addEventListener("resize",size);
-    new IntersectionObserver(function(es){run=es[0].isIntersecting;if(run)requestAnimationFrame(tick)}).observe(sky);
-    function tick(t){
-      if(!run)return;
-      c.clearRect(0,0,W,H);
-      for(var i=0;i<parts.length;i++){var p=parts[i];p.y-=p.vy;p.ph+=.02;var x=p.x+Math.sin(p.ph)*(p.gel?14:6);
-        if(p.gel){var sq=1+Math.sin(p.ph*2)*.08;c.save();c.translate(x,p.y);c.scale(1/sq,sq);
-          var g=c.createRadialGradient(-p.r*.35,-p.r*.4,p.r*.1,0,0,p.r);g.addColorStop(0,"rgba(255,255,255,"+(p.a*.9)+")");g.addColorStop(.35,"rgba("+p.col+","+p.a*.7+")");g.addColorStop(1,"rgba("+p.col+",0.05)");
-          c.fillStyle=g;c.beginPath();c.arc(0,0,p.r,0,6.283);c.fill();c.restore();}
-        else{var tw=.5+.5*Math.sin(p.ph*3);c.fillStyle="rgba("+p.col+","+(p.a*tw)+")";c.beginPath();c.arc(x,p.y,p.r,0,6.283);c.fill();
-          if(p.r>2.4){c.strokeStyle="rgba("+p.col+","+(p.a*tw*.6)+")";c.lineWidth=1;c.beginPath();c.moveTo(x-6,p.y);c.lineTo(x+6,p.y);c.moveTo(x,p.y-6);c.lineTo(x,p.y+6);c.stroke()}}
-        if(p.y<-30)parts[i]=mk(false);}
-      requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-
-  /* ---- section reveal: content is visible at rest; it only slides up a little ---- */
-  if("IntersectionObserver" in window && !reduce){
-    var rvs=[].slice.call(document.querySelectorAll(".rv"));
-    var vh=window.innerHeight;
-    rvs.forEach(function(el){if(el.getBoundingClientRect().top>vh)el.classList.add("pre")});
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove("pre");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});
-    rvs.forEach(function(el){io.observe(el)});
-  }
-
-  /* ---- safe refine mini-game ---- */
-  var lvl=0,gem=document.getElementById("gem"),lvlEl=document.getElementById("lvl"),log=document.getElementById("log"),btn=document.getElementById("refineBtn");
-  var sc=document.getElementById("sparks"),sx=sc.getContext("2d"),sp=[],animating=false;
-  function burst(n,col){for(var i=0;i<n;i++){var a=Math.random()*6.283,v=2+Math.random()*5;sp.push({x:210,y:210,vx:Math.cos(a)*v,vy:Math.sin(a)*v-1,l:1,col:col})}if(!animating&&!reduce){animating=true;requestAnimationFrame(sparkTick)}}
-  function sparkTick(){sx.clearRect(0,0,420,420);for(var i=sp.length-1;i>=0;i--){var s=sp[i];s.x+=s.vx;s.y+=s.vy;s.vy+=.12;s.l-=.025;if(s.l<=0){sp.splice(i,1);continue}sx.fillStyle="rgba("+s.col+","+s.l+")";sx.beginPath();sx.arc(s.x,s.y,2.6,0,6.283);sx.fill()}if(sp.length)requestAnimationFrame(sparkTick);else{animating=false;sx.clearRect(0,0,420,420)}}
-  function chance(l){return Math.max(.22,1-l*.065)}
-  btn.addEventListener("click",function(){
-    if(lvl>=15){log.innerHTML="<b class='ok'>+15 reached.</b> That's the cap. Imagine this on your real gear.";return}
-    gem.classList.remove("hit","fail");void gem.offsetWidth;
-    if(Math.random()<chance(lvl)){lvl++;gem.classList.add("hit");burst(26,"242,179,61");
-      log.innerHTML=lvl===15?"<b class='ok'>Success! +15.</b> Max refine, zero broken gear.":"<b class='ok'>Success!</b> Now at +"+lvl+".";}
-    else{gem.classList.add("fail");burst(10,"141,176,255");
-      log.innerHTML="<b class='no'>Failed.</b> Gear still at +"+lvl+". No break, no level loss. Try again.";}
-    lvlEl.textContent="+"+lvl;
-  });
-  document.getElementById("resetBtn").addEventListener("click",function(){lvl=0;lvlEl.textContent="+0";log.textContent="Your weapon is at +0. Hit Refine."});
-
-  /* ---- offline idle slider ---- */
-  var hours=document.getElementById("hours"),hOut=document.getElementById("hoursOut"),fill=document.getElementById("fill"),orb=document.getElementById("orb"),scene=document.getElementById("idleScene");
-  var icons=["💎","🪙","📜","🧪","🍎","⚔️","🪙","💎","🧪","📜","🪙","🛡️"];
-  function idle(){var h=+hours.value;hOut.textContent=h+" h";fill.style.setProperty("--fill",Math.round(h/12*100));
-    var t=(h-1)/11;orb.style.setProperty("--t",t);orb.style.setProperty("--a",(t*180)+"deg");
-    var night=h>=6;orb.style.background=night?"radial-gradient(circle at 35% 35%,#FFFFFF,#CFE0FF 60%,#8DB0FF)":"";orb.style.boxShadow=night?"0 0 30px #8DB0FF":"";
-    scene.querySelectorAll(".loot").forEach(function(n){n.remove()});
-    for(var i=0;i<h;i++){var s=document.createElement("span");s.className="loot";s.textContent=icons[i];s.style.left=(4+i*7.8)+"%";s.style.animationDelay=(i*.15)+"s";scene.appendChild(s)}}
-  hours.addEventListener("input",idle);idle();
-
-  /* ---- trailer player (loads only on click) ---- */
-  var screen=document.getElementById("screen"),pb=document.getElementById("playBtn"),vp=document.getElementById("vposter"),vl=document.getElementById("vlabel");
-  var cur={src:"assets/trailer-gameplay.mp4"};
-  function play(){var v=document.createElement("video");v.src=cur.src;v.controls=true;v.autoplay=true;v.playsInline=true;v.setAttribute("aria-label",vl.textContent);
-    screen.innerHTML="";screen.appendChild(v);var p=v.play();if(p&&p.catch)p.catch(function(){});window.dataLayer.push({event:"trailer_play",trailer:cur.src})}
-  pb.addEventListener("click",play);
-  document.querySelectorAll(".tab").forEach(function(t){t.addEventListener("click",function(){
-    document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-selected","false")});t.setAttribute("aria-selected","true");
-    cur.src=t.dataset.src;
-    screen.innerHTML="";var img=document.createElement("img");img.src=t.dataset.poster;img.alt=t.dataset.label+" preview";screen.appendChild(img);
-    pb=document.createElement("button");pb.className="playbtn";pb.type="button";pb.setAttribute("aria-label","Play the trailer");
-    pb.innerHTML='<span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5Z"/></svg></span><em>'+t.dataset.label+'</em>';
-    vl={textContent:t.dataset.label};pb.addEventListener("click",play);screen.appendChild(pb);
-  })});
-
-  /* ---- gallery lightbox ---- */
-  var lb=document.getElementById("lightbox"),lbImg=document.getElementById("lbImg"),lbCap=document.getElementById("lbCap");
-  function openShot(f){var im=f.querySelector("img");lbImg.src=f.dataset.full;lbImg.alt=im.alt;lbCap.textContent=f.querySelector("figcaption").textContent;
-    if(lb.showModal)lb.showModal();else lb.setAttribute("open","")}
-  document.querySelectorAll(".shot").forEach(function(f){f.addEventListener("click",function(){openShot(f)});f.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();openShot(f)}})});
-  document.getElementById("lbClose").addEventListener("click",function(){lb.close?lb.close():lb.removeAttribute("open")});
-  lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
-
-  /* ---- party roles ---- */
-  var roles={tank:{t:"Tank",p:"Hold the boss's attention and soak the hits while your party lays into it.",img:"assets/ss4.webp",alt:"Party fighting an MVP boss in an arena"},
-    heal:{t:"Healer",p:"Keep everyone standing through the boss's big attacks. The party lives or wipes with you.",img:"assets/ss3.webp",alt:"A party gathered on an airship deck"},
-    dps:{t:"Damage",p:"Burst, summon or control. Stack skill combos and turn the toughest boss into loot.",img:"assets/ss7.webp",alt:"Big damage numbers against glowing monsters"}};
-  var rImg=document.getElementById("roleImg"),rCard=document.getElementById("roleCard");
-  document.querySelectorAll(".role").forEach(function(b){b.addEventListener("click",function(){
-    document.querySelectorAll(".role").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");
-    var r=roles[b.dataset.role];rCard.innerHTML="<h3>"+r.t+"</h3><p>"+r.p+"</p>";rImg.style.opacity=0;
-    setTimeout(function(){rImg.src=r.img;rImg.alt=r.alt;rImg.style.opacity=1},reduce?0:200);
-  })});
-  /* druid forms cycle */
-  var forms=[].slice.call(document.querySelectorAll("#forms span")),fi=0;
-  if(!reduce)setInterval(function(){forms[fi].classList.remove("on");fi=(fi+1)%forms.length;forms[fi].classList.add("on")},1800);
-
-  /* ---- RAM check ---- */
-  var ramOut=document.getElementById("ramOut");
-  var ramMsg={"8":"Below the 12 GB minimum. The game may not run well on this PC.","12":"You meet the minimum. Close other apps for smoother play.","16":"You're at the recommended spec. Good to go.","0":"On Windows: press Ctrl + Shift + Esc, open Performance, then Memory. The total is at the top right."};
-  document.querySelectorAll(".ram-opts button").forEach(function(b){b.addEventListener("click",function(){
-    document.querySelectorAll(".ram-opts button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");
-    ramOut.textContent=ramMsg[b.dataset.ram];window.dataLayer.push({event:"ram_check",ram:b.dataset.ram});
-  })});
-})();
-</script>
+<script src="script.js" defer></script>
 
 </body>
 </html>
